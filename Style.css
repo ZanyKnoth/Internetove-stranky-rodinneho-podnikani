@@ -1,0 +1,517 @@
+html {
+ scroll-behavior: smooth;
+ 
+}
+
+.innerContent1 span {
+  color:  #d01a69;
+
+}
+
+body {
+  margin: 0 auto;
+  padding-top: 80px;
+  font-family: sans-serif;
+
+}
+          
+.mainNav {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  top: 0;
+  color: white;
+  text-decoration: none; 
+  position: fixed;
+  z-index: 500; 
+          
+}
+          
+.nav {
+  margin: 0 auto;
+  color: white;
+  background-color: black;
+  width: 800px;
+  box-sizing: border-box;
+  height: 100%;                               
+  background-color: black;
+  font-size: 1.3em;                                      
+  text-align: center;
+  text-decoration: none; 
+  position: relative;
+
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+   padding: 0 17px 0 0;
+   
+}
+  
+.nav img {
+  position: relative;
+  top: 7px;
+
+}
+
+#toogle {
+  display: none;  
+
+}
+         
+/* Zaèátek úprav slideru (checkboxu) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+  top: -1px;
+  
+}
+
+.switch input {
+  opacity: 0;
+  
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 4px;
+  bottom: 1.2px;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+
+.slider:after {
+  position: absolute;
+  content:"Dark";
+  font-size: 12px;
+  display: block;
+  top: 20%;
+  left: 50%;
+  color: black;
+   
+}
+
+input:checked + .slider {
+  background-color: black;
+  border: 0.5px solid white; 
+  
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+  
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+  background-color: white;
+  
+}
+
+input:checked + .slider:after {
+  position: absolute;
+  content:"Light";
+  font-size: 12px;
+  display: block;
+  top: 14%;
+  left: 10%;
+  color: white;
+  
+}
+
+.slider.round {
+  border-radius: 34px;
+  
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  
+}
+/* Konec úprav slideru (checkboxu) */
+
+/* Zaèátek úprav tlaèítka na scroll nahoru */
+.scrollbtn {
+  top: 87%;
+  left: 87%;
+  color: white;
+  background-color: #e7b9ca;
+  font-size: 2vh;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  transition: .4s all;
+  
+}
+
+.attheendposition {
+  top: 65%;
+  left: 87%;
+
+}
+/* Konec úprav tlaèítka na scroll nahoru */
+          
+.mainContent1 {
+  background-image: url("images/flowers.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; 
+  display: flex;
+
+}
+          
+.innerContent1 {
+  position: relative;
+  width: 700px;
+  height: 100%;                               
+  top: 32%;
+  box-sizing: border-box; 
+  margin: 0 auto;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3em;
+  
+}     
+
+/* zaèátek stylizování kurzoru + animace */
+.kurzor {
+  font-size: 30px;
+  animation: 1s blinking infinite;
+
+}
+
+@keyframes blinking {
+  0% 100% {
+    color: #d01a69;
+  
+    }
+  
+  50% {
+    color: rgba(255, 255, 255, 0.2);   //tyto tøi 255 je bílá. To poslední je prùhlednost, takže jakože je to spíš takové prùsvitné/neviditelné. Takže když to blikne, tak to jde z rùžové do takovì neviditelné a zase zpátky. 
+   
+    }
+} 
+/* konec stylizování kurzoru + animace */
+          
+.mainContent2, .mainContent3, .mainContent4, .mainContent5 {
+  width: 100%;
+  height: auto;
+  background-color: #eeefea; 
+  display: flex;
+  overflow-x: hidden;
+  overflow: hidden;
+           
+}
+
+.innerContent2, .innerContent3, .innerContent4, .innerContent5 {
+  width: 750px;
+  height: 87%;                               
+  padding: 52px;
+  box-sizing: border-box; 
+  margin: 0 auto; 
+  overflow-x: hidden;
+  overflow: hidden;
+  
+}  
+ 
+.innerContent1 h1, .innerContent2 h1, .innerContent3 h1, .innerContent4 h1, .innerContent5 h1{
+  text-align: center;
+
+}
+
+#innerContent4Buttons {
+  text-align: center;
+  
+}
+
+#innerContent4Buttons button {
+  display: inline-block;
+  margin: 0 auto;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: #e7b9ca;
+  color: white;
+  
+}
+
+.reference h3 {
+  text-align: center;
+}
+
+.photo {
+  display: inline-block;
+  text-align: center;
+}
+
+.photo img {
+  width: 60%;
+  
+}
+
+/* zaèátek animace slidù referencí */
+@keyframes showElementFromLeftToRight {
+  from {
+    margin-left: 100%;
+    width: 100%;
+    
+  }
+  
+  to {
+    margin-left: 0;
+    width: 100%;
+    
+  }
+}
+
+@keyframes showElementFromRightToLeft {
+  from {
+    margin-left: -100%;
+    width: 100%;
+
+  }
+  
+  to {
+    margin-left: 0;
+    width: 100%;
+    
+  }
+}
+
+@keyframes hideElementFromCenterToLeft {
+  0% {
+    margin-left: 0;
+    width: 100%;
+
+  }
+  
+  100% {
+    margin-left: -110%;
+    opacity: 0;
+    width: 100%;
+  
+  }  
+}
+
+@keyframes hideElementFromCenterToRight {
+  0% {
+    margin-left: 0;
+    width: 100%;
+
+  }
+  
+  100% {
+    margin-left: 110%;
+    opacity: 0;
+    width: 100%;
+  
+  }  
+}
+/* koncec animace slidù referencí */
+
+.innerContent5 textarea {
+  resize: none;
+
+}
+
+.required-symbol {
+  color: red;
+  
+}
+#textarea-symbol {
+  position:relative; 
+  top: -120px;
+
+}  
+
+.mainEmpty1, .mainEmpty2, .mainEmpty3 {
+  width: 100%;
+  min-height: 350px;
+  max-height: 1200px;
+  height: 100%;
+  background-position: 0% 64%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 80px;
+           
+}
+
+.mainEmpty1 {
+  background-image: url("images/wed.jpg");
+
+}
+
+.mainEmpty2 {
+  background-image: url("images/rings.jpg");
+
+}
+
+.mainEmpty3 {
+  background-image: url("images/cake.jpg");
+
+}
+
+.ending {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: white;                               
+  text-align: center;
+  padding: 60px 0;
+
+}
+          
+
+          
+@media (max-width: 1000px) {
+  
+  .nav {
+    display: none; 
+  
+  }
+  
+  .active { 
+     color: white;
+     background-color: black;
+     height: 290px;
+     width: 100%;
+     display: block;
+     margin-top: 50px;   
+    
+  }
+  
+  .active a, .active img {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 10px 0 0 0;
+  }
+  
+  #toogle {
+    color: white;
+    background-color: black;
+    width: 100%;    
+    position: absolute;
+    font-size: 1.3em;
+    text-align: left;
+    text-decoration: none;                                       
+    display: block;
+    overflow-x: hidden;
+                 
+}
+
+  #toogle i {
+    padding: 30px 10px; 
+    box-sizing: border-box; 
+    position: fixed; 
+     
+  }
+  
+  .mainContent1 {
+    background-image: url("images/flowers.jpg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    display: flex;
+
+  }
+                 
+  .mainContent2, .mainContent3, .mainContent4, .mainContent5 {
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid black;
+    background-color: #eeefea;     
+
+  }
+
+  .mainEmpty1, .mainEmpty2, .mainEmpty3, .mainEmpty4 {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed;
+    display: flex;
+                     
+  } 
+                   
+  .innerContent2, .innerContent3, .innerContent4, .innerContent5 {
+    width: 100%;
+    height: auto;                               
+    padding: 52px 0 0 20px;
+    box-sizing: border-box;
+    float: left;
+    
+  }
+                                         
+  .innerContent1 {
+    width: 100%;
+    height: auto;                            
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; 
+       
+  }
+
+  .innerContent1 h1 {
+    position: relative; 
+    height: auto;
+    top: -60px;
+    font-size: 1.6em; 
+    text-align: center; 
+
+  }
+  
+  .ending {
+  height: 50px;
+  padding: 50px 0;
+
+}
+  
+  .scrollbtn {
+    width: 41px;
+    height: 41px;
+  
+  }  
+}
+
+@media (min-width: 568px) {
+  .innerContent1 h1 {
+    top: -50px; 
+  
+  }   
+}             
